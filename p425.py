@@ -193,6 +193,7 @@
 '''
 split方法:将字符串变成其子串组成的列表
 '''
+from re import split
 
 '''
 join方法： 将一个字符串列表变成一个字符串
@@ -2131,3 +2132,659 @@ break语句
 # def sortByLength(pres):
 #     return len(pres.split()[0])
 # main()
+# (x,y) = (2,3)
+# def main():
+#     z = 5
+#     global y
+#     y += 1
+#     display()
+#     print('x:',x,'y:',y,'z',z)
+# def display():
+#     print(x,y,end=" ")
+#     z = 8
+# main()
+
+
+# array = [865, 1169, 1208, 1243, 329]
+# # 定义取和
+# def a_sun(number):
+#     t1 = number % 10
+#     l1 = number // 10
+#     t2 = l1 % 10
+#     l2 = l1 // 10
+#     t3 = l2 % 10
+#     l3 = l2 // 10
+#     t4 = l3 % 10
+#     asum = t1 + t2 + t3 + t4
+#     return asum
+# def a_des(array):
+#     for d in range(0, len(array)):
+#         for i in range(0, len(array)):
+#             if a_sun(array[i]) > a_sun(array[d]):
+#
+#
+#                 array[d], array[i] = array[i], array[d]
+# a_des(array)
+# print(array)
+# # #
+#
+# def main():
+#     file = "E:\\uspres.txt"
+#     displayWithForLoop(file)
+#     print()
+#     displayWithListComprehension(file)
+# def displayWithForLoop(file):
+#     infile = open(file,'r')
+#     for line in infile:
+#         print("line:",line,end="")
+#     infile.close()
+# def displayWithListComprehension(file):
+#     infile = open(file,'r')
+#     listPres = [line.rstrip() for line in infile]
+#     infile.close()
+#     print("listPres:",listPres)
+# main()
+
+
+# def main():
+#     outfile = open("E:\\uspres.txt",'w')
+#     createWithWritelines(outfile)
+#     outfile = open("E:\\uspres1.txt",'w')
+#     createWithWrite(outfile)
+# def createWithWritelines(outfile):
+#     list1 = ["a. George Washington","b. John Adams","c . Thomas Jefferson"]
+#     for i in range(len(list1)):
+#         list1[i] = list1[i] +"\n"
+#     outfile.writelines(list1)
+#     outfile.close()
+# def createWithWrite(outfile):
+#         outfile.write("1George Washington\n")
+#         outfile.write("2 John Adams\n")
+#         outfile.write("3 Thomas Jefferson\n")
+#         outfile.close()
+# main()
+
+
+# def main():
+#     stateList = createListFormFile("E:\\states.txt")
+#     createSortedFile(stateList,"E:\\statesalpha.txt")
+# def createListFormFile(filename):
+#     infile = open(filename,'r')
+#     desiredList = [line.rstrip() for line in infile]
+#     infile.close()
+#     return desiredList
+#
+# def createSortedFile(listname,filename):
+#     listname.sort()
+#     for i in range(len(listname)):
+#         listname[i] = listname[i]+"\n"
+#     outfile = open(filename,'w')
+#     outfile.writelines(listname)
+#     outfile.close()
+# main()
+
+
+# def main():
+#     vicePresList= createListFromFile("E:\\vpstates.txt")
+#     createNewFile(vicePresList,"E:\\states.txt","E:\\both.txt")
+# def createListFromFile(fileName):
+#     infile = open(fileName,'r')
+#     desiredList = [line.rstrip() for line in infile]
+#     infile.close()
+#     return desiredList
+# def createNewFile(listName,oldFileName,newFileName):
+#     infile = open(oldFileName,'r')
+#     outfile = open(newFileName,'w')
+#     for person in infile:
+#         if person.rstrip() in listName:
+#             outfile.write(person)
+#         infile.close()
+#         outfile.close()
+# main()
+
+#
+# def main():
+#     outfile = open("E:\\FilrstPresidents.txt",'a')
+#     list1 = ["James Madison\n","James Monroe\n"]
+#     outfile.writelines(list1)
+#     outfile.write("John Q.Adams\n")
+#     outfile.close()
+# main()
+
+# words = {"spam","ni"}
+# # words.clear()
+# print(words)
+# words.add("eggs")
+# print(words)
+# words.discard("ni")
+# print(words)
+
+# print(set[3,7,3])
+# def main():
+#     words = ["nudge","nudge","wink","wink"]
+#     terms = set(words)
+#     print(terms)
+#     words = list(terms)
+#     print(words)
+#     terms.add("nudge")
+#     terms.add("maybe")
+#     print(terms)
+#     terms.discard("nudge")
+#     print(terms)
+#     words = tuple(terms)
+#     print(words)
+# main()
+#
+# a = {x *x for x in range (-3,3)}
+# b = list(a)
+# b.sort()
+# c = set(b)
+# print(c)
+
+
+# def main():
+#     infile = open("F:\\file1.txt",'r')
+#     firstSet = {line.rstrip() + "\n" for line in infile}
+#     infile.close()
+#     infile = open("F:\\file2.txt",'r')
+#     secondSet = {line.rstrip() + "\n" for line in infile}
+#     infile.close()
+#     outfile = open("F:\\union.txt",'w')
+#     outfile.writelines(firstSet.union(secondSet))
+#     outfile.close()
+#     outfile = open("F:\\interesection.txt",'w')
+#     outfile.writelines(firstSet.intersection(secondSet))
+#     outfile.close()
+#     outfile = open("F:\\difference.txt",'w')
+#     outfile.writelines(firstSet.difference(secondSet))
+#     outfile.close()
+
+
+
+
+# def main():
+#     vicePresSet = createSetFromFile("F:\\file\\VPres.txt")
+#     presSet = createSetFromFile("F:\\file\\USPres.txt")
+#     bothPresAndVPresSet = createIntersection(vicePresSet,presSet)
+#     writeNamesToFile(bothPresAndVPresSet,"F:\\file\\presAndVPres.txt")
+# def createSetFromFile(fileName):
+#     infile = open(fileName,'r')
+#     namesSet = {name for name in infile}
+#     infile.close()
+#     return namesSet
+# def createIntersection(set1,set2):
+#     return set1.intersection(set2)
+# def writeNamesToFile(setName,fileName):
+#     outfile = open(fileName,'w')
+#     outfile.writelines(setName)
+#     outfile.close()
+# main()
+
+
+# def main():
+#     setOfNewColors = getSetOfNewColors()
+#     createFileOfNewColors(setOfNewColors)
+# def getSetOfNewColors():
+#     infile = open("F:\\file\\pre1990.txt",'r')
+#     colors = {line.rstrip() for line in infile}
+#     infile.close()
+#     infile = open("F:\\file\\retired.txt",'r')
+#     retiredColors = {line.rstrip() for line in infile}
+#     infile.close()
+#     infile = open("F:\\file\\added.txt",'r')
+#     addedColors = {line.rstrip() for line in infile}
+#     infile.close()
+#     colorSet = colors.difference(retiredColors)
+#     colorSet = colorSet.union(addedColors)
+#     return colorSet
+# def createFileOfNewColors(setOfNewColors):
+#     orderListOfColors = sorted(getSetOfNewColors)
+#
+#      = ('\n').join(orderListOfColors)
+#     outfile = open("F:\\file\\NewColors.txt",'w')
+#     outfile.write(orderListOfColorsString)
+#     outfile.close()
+# main()
+
+# def main():
+#     max = getMax("F:\\file\\numbers.txt")
+#     print("the largest number in the \nfile numbers.txt is",str(max) + ".")
+# def getMax(filename):
+#     infile = open("F:\\file\\numbers.txt",'r')
+#     max = int(infile.readline())
+#     for line in infile:
+#         num = int(line)
+#         if num > max:
+#             max = num
+#     infile.close()
+#     return max
+# main()
+
+#
+# def main():
+#     sum = getSum("F:\\file\\numbers.txt")
+#     print("the largest number in the \nfile numbers.txt is",str(sum) + ".")
+# def getSum(filename):
+#     infile = open("F:\\file\\numbers.txt",'r')
+#     sum = 0
+#     for line in infile:
+#         sum += int(line)
+#     infile.close()
+#     return sum
+# main()
+
+
+#
+# def main():
+#     numbdigit = getnumbdigit("F:\\file\\numbers.txt")
+#     print("the file numbers.txt contains ",str(numbdigit) + " numbers.")
+# def getnumbdigit(s):
+#     file_name = "F:\\file\\numbers.txt"
+#     number_counts = 0
+#     with open(file_name, 'r') as f:
+#         for line in f:
+#                 number_list = [x for x in line.split() if x.isdigit()]
+#                 number_counts = len(number_list)
+#                 return number_counts
+# main()
+
+
+
+#
+# def main():
+#     lastNumber = getLastNumber("F:\\file\\numbers.txt")
+#     print("the last number in the \nfile numbers.txt is",str(lastNumber)+".")
+# def getLastNumber(fileName):
+#     infile = open("F:\\file\\numbers.txt",'r')
+#     for line in infile:
+#         pass
+#     lastNumber = eval(line)
+#     infile.close()
+#     return lastNumber
+# main()
+
+
+# def main():
+#     continent = input("enter the name of a continent: ")
+#     continent = continent.title()
+#     if continent != "antactica":
+#         infile = open("F:\\file\\un.txt",'r')
+#         for line in infile:
+#             data = line.split(',')
+#             if data[1] == continent:
+#                 print(data[0])
+#     else:
+#         print("there are no countries in antactica")
+# main()
+
+
+# def main():
+#     d = {}
+#     d["spam"] = 3
+#     print(d)
+#     d.update({"spam":1,"eggs":2})
+#     print(d)
+#     print("d has",len(d),"items")
+#     print("eggs" in d)
+#     print("keys:",list(d.keys()))
+#     print("values:",list(d.values()))
+#     for key in d:
+#         print(key,d[key])
+#     print(d.get("toast","not in dictionary"))
+#     del(d["eggs"])
+#     print(d)
+# main()
+
+
+# list1 = [["one",1],["two",2],["three",3]]
+# def main():
+#     texteseDict = createDictionary("F:\\file\\textese.txt")
+#     print("enter a simple sentence in lowercase letters without")
+#     sentence = input("any punctuation: ")
+#     print()
+#     translate(sentence,texteseDict)
+# def createDictionary(filename):
+#     infile = open(filename,'r')
+#     textList = [line.rstrip() for line in infile]
+#     infile.close()
+#     return dict ([x.split(',') for x in textList])
+# def translate(sentence,textesedict):
+#     words = sentence.split()
+#     for word in words:
+#         print(textesedict.get(word,word) + " ",end="")
+# main()
+
+# def main():
+#     print("enter the person's age group",end="")
+#     ageGroup = input("(child , minor ,adult , or senior")
+#     print("the admission fee is",determineAmissionFee(ageGroup),"dolaes.")
+# def determineAmissionFee(ageGroup):
+#     # if ageGroup == "child":
+#     #     return 0
+#     # elif ageGroup == "minor":
+#     #     return 5
+#     # elif ageGroup == "adult":
+#     #     return 10
+#     # elif ageGroup == "senior":
+#     #     return 8
+#     dict = {"child":0,"minor":5,"adult":10,"senior":8}
+#     return dict[ageGroup]
+# main()
+
+# def main():
+#     listOfWords = formListOfWords("F:\\file\\gettysburg.txt")
+#     freq = createFrequencyDictionary(listOfWords)
+#     displayWordCount(listOfWords,freq)
+#     displayMostCommonWords(freq)
+# def formListOfWords(filename):
+#     infile = open(filename)
+#     originalLine = infile.readline().lower()
+#     line = ""
+#     for ch in originalLine:
+#         if ('a'<=ch<='z') or (ch == " "):
+#             line += ch
+#         listOfWords = line.split()
+#         return listOfWords
+# def createFrequencyDictionary(listOfWords):
+#     freq = {}
+#     for word in listOfWords:
+#         freq[word] = 0
+#     for word in listOfWords:
+#         freq[word] = freq[word]+1
+#     return freq
+# def displayWordCount(listofwords,freq):
+#     print("the gettysburg address contains",len(listofwords),"words.")
+#     print("the gettysburg address contains",len(freq),"different words")
+#     print()
+# def displayMostCommonWords(freq):
+#     print("the most cimmon words and thier frequencies are: ")
+#     listofmostcommonwords = []
+#     for word in freq.keys():
+#         if freq[word] >= 6:
+#             listofmostcommonwords.sort(key=lambda x:x[1],reverse=True)
+#             for item in listofmostcommonwords:
+#                 print(" ",item[0] + ': ',item[1])
+# main()
+#
+#
+
+
+
+
+NE={"CT":3.6,"ME":1.3,"MA":6.5,"NH":1.5,"RI":1.1,"VT":0.6}
+# print(NE["MA"])
+# print(len(NE))
+# print(list(NE.keys()))
+# print(list(NE.values()))
+# print(list(NE.items()))
+# print("NH" in NE)
+# print(NE.get("PA","absent"))
+# print(NE.get("RI","absent"))
+# for x in NE:
+#     print(x + " ",end = "")
+# NE.clear()
+# print(NE)
+# total = 0
+# for x in NE:
+#     total += NE[x]
+# print("{0:.1f}".format(total))
+
+# newEngland = dict(NE)
+# print(newEngland)
+# del newEngland["VT"]
+# print(newEngland)
+# print(len(newEngland))
+#
+
+# homeRunKings = {"Bonds":762,"Aaron":755}
+# print(len(homeRunKings))
+# print(homeRunKings["Aaron"])
+# print("Ruth" in homeRunKings)
+# print(list(homeRunKings.items()))
+# print(min(homeRunKings))
+# print(max(homeRunKings))
+# print(list(homeRunKings))
+# print("Aaron" not in homeRunKings)
+# print(list(homeRunKings.values()))
+# print(list(homeRunKings.keys()))
+# # print(homeRunKings.get("NA"))
+# print(homeRunKings.get("NA"))
+# for x in sorted(homeRunKings):
+#     print(type(x))
+# dupHRKs = homeRunKings
+# dupHRKs["Bonds"] = 750
+# print(homeRunKings["Bonds"])
+# newHRKs = {}
+
+
+# topHitters = {"gehrig":{"atbats":8061,"hits":2721},
+#               "ruth":{"atbats":8399,"hits":2873},
+#               "williams":{"atbats":7706,"hits":2654}}
+# def main():
+#     topHitters = {"gehrig": {"atbats": 8061, "hits": 2721},
+#                   "ruth": {"atbats": 8399, "hits": 2873},
+#                   "williams": {"atbats": 7706, "hits": 2654}}
+#     displayBattingAverage(topHitters)
+# def displayBattingAverage(topHitters):
+#     for hitter in topHitters:
+#         print("{0:10} {1:.3f}".format(hitter,topHitters[hitter]["hits"] / topHitters[hitter]["atbats"]))
+# main()
+
+
+
+
+# def main():
+#     topHitters = {"gehrig": {"atbats": 8061, "hits": 2721},
+#                   "ruth": {"atbats": 8399, "hits": 2873},
+#                   "williams": {"atbats": 7706, "hits": 2654}}
+#     displayBattingAverage(topHitters)
+# def displayBattingAverage(topHitters):
+#     hitList = []
+#     for hitter in topHitters:
+#         print(hitter)
+#         hitList.append(topHitters[hitter]["hits"])
+#         print("hitList:",hitList
+#               )
+#     value = "{0:.1f}".format(sum(hitList) / len(hitList))
+#     print("the average number of hits by")
+#     print("the baseball players was",value+'.')
+# main()
+
+
+
+# 'earl warren':{'pres':'dwight fisenhower','yrleft':1969,'yrappt':1953,'state':'ca'}
+#
+#
+# try:
+#     numDependents = int(input("enter number of dependents: "))
+# except ValueError:
+#     print("\nyou did not respond with an integer value")
+#     print("we will assume your answer is zero\n")
+#     numDependents = 0
+# taxCredit = 1000 * numDependents
+# print("tax credit : ",taxCredit)
+
+
+#
+# def main():
+#     try:
+#         fileName = input("enter the name of a file :")
+#         infile = open(fileName,'r')
+#         num = float(infile.readline())
+#         print(1/num)
+#     except FileNotFoundError as exc1:
+#         print(exc1)
+#     except ValueError as exc2:
+#         print(exc2)
+# main()
+# def main():
+#     phoneticAlphabet = {'a':"alpha",'b':"bravo",'c':"charlie"}
+#     while True:
+#         try:
+#             letter = input("enter a,b or c: ")
+#             print(phoneticAlphabet[letter])
+#             break
+#         except KeyError:
+#             print("unacceptable letter was entered.")
+# main()
+
+#
+# def main():
+#     total = 0
+#     counter = 0
+#     foundFlag = True
+#     try:
+#         infile = open("F:\\file\\numbers.txt",'r')
+#     except FileNotFoundError:
+#         print("file not found")
+#         foundFlag = False
+#     if foundFlag:
+#         try:
+#             for line in infile:
+#                 counter += 1
+#                 print("counter: ",counter)
+#                 total += float(line)
+#                 print("total: ",total)
+#             print("average: ",total/counter)
+#         except ValueError:
+#             print("line",counter,"could not be converted to a float.")
+#             if counter > 1:
+#                 print("average so far : ",total/(counter-1))
+#                 print("total so far: ",total)
+#             else:
+#                 print("no average can be calculated")
+#         except ZeroDivisionError:
+#             print("file was empty")
+#         else:
+#             print("total: ",total)
+#         finally:
+#             infile.close()
+# main()
+
+
+# import os
+# def main():
+#     createFile()
+#     infile = open("F:\\file\\newfile.txt",'r')
+#     deleteFile("F:\\file\\newfile.txt")
+# def createFile():
+#     f = open("F:\\file\\newfile.txt",'w')
+#     f.write("hello,world\n")
+#     f.close()
+# def deleteFile(filename):
+#     try:
+#         os.remove(filename)
+#     except:
+#         print("file is open and cannot be deleted.")
+# main()
+
+
+
+# x = int("1.234")
+# f = open("abc.txt",'p')
+# x = ['a','b'[2]]
+# total = (2+'3')
+# x = ['a','b'[2]]
+# x = list(range(1,9))[8]
+# x = 23
+# print(x.startswith(2))
+#
+# x = 8
+# x.append(2)
+
+# {"air","fire","earth","water"}.sort()
+
+# try:
+#     num = float(input("enter a number: "))
+#     print("your number is : ",num)
+# except:
+#     print("you must enter a number.")
+
+# nafta = ["canada","united states","mexico"]
+# try:
+#     print("the third member of NAFTA is ",nafta[3])
+# except IndexError:
+#     print("error occurred.")
+#
+# while True:
+#     try:
+#         n = int(input("enter a nonzero integer: "))
+#         reciprocal = 1/n
+#         print("the reciprocal of {0} is {1:,.3f}".format(n,reciprocal))
+#         break
+#     except ValueError:
+#         print("you did not enter a nonzero integer.try again")
+#     except ZeroDivisionError:
+#         print("you entered zero . try again.")
+
+# while True:
+#     try:
+#         num = int(input("enter an integer from 1 to 100: "))
+#         if 1<= num <= 100:
+#             print("your number is",str(num) + '.')
+#             break
+#         else:
+#             print("your number was not between 1 and 100.")
+#     except ValueError:
+#         print("you did not enter an integer")
+
+# import random
+# elements = ["earth","air","fire","water"]
+# # print(random.choice(elements))
+# # print(random.sample(elements,2))
+# random.shuffle(elements)
+# print(elements)
+# # print(random.randint(1,5))
+
+
+
+# def main():
+#     bankroll = int(input("enter the amount of the bankroll: "))
+#     (amount ,timesPlayed) = playDoubleOrNothing(bankroll)
+#     print("ending bankroll: ",amount,"dollars")
+#     print("number of games played: ",timesPlayed)
+# def isOdd(n):
+#     if (1<= n<=36) and (n % 2):
+#         return True
+#     else:
+#         return False
+# def profit(n):
+#     if isOdd(n):
+#         return 1
+#     else:
+#         return -1
+# def playDoubleOrNothing(bankroll):
+#     amount = bankroll
+#     timesPlayed = 0
+#     while 0<amount<2*bankroll:
+#         n = random.randint(0,37)
+#         timesPlayed += 1
+#         amount += profit(n)
+#     return (amount,timesPlayed)
+# main()
+#
+# def main():
+#     for i in range(3):
+#         outcome = spinWheel()
+#         # print("i:",i)
+#         print(outcome,end=" ")
+# def spinWheel():
+#     n = random.randint(1,20)
+#     print("n: ",n)
+#     if n>15:
+#         return "cherries"
+#     elif n>10:
+#         return "orange"
+#     elif n>5:
+#         return "plum"
+#     elif n>2:
+#         return "melon"
+#     elif n>1:
+#         return "bell"
+#     else:
+#         return "bar"
+# main()
+import random
+list1 = [chr(n) for n in range(ord('A') ,ord('Z')+1)]
+list2 = random.sample(list1,3)
+print(",".join(list2))
