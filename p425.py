@@ -2784,7 +2784,341 @@ NE={"CT":3.6,"ME":1.3,"MA":6.5,"NH":1.5,"RI":1.1,"VT":0.6}
 #     else:
 #         return "bar"
 # main()
-import random
-list1 = [chr(n) for n in range(ord('A') ,ord('Z')+1)]
-list2 = random.sample(list1,3)
-print(",".join(list2))
+# import random
+# list1 = [chr(n) for n in range(ord('A') ,ord('Z')+1)]
+# list2 = random.sample(list1,3)
+# print(",".join(list2))
+
+#
+# import random
+# list1 = [n for n in range(2,101,2)]
+# list2 = random.sample(list1,2)
+# print(list2[0],list2[1])
+
+# import random
+# numberOfHeads = 0
+# for i in range(100):
+#     if (random.choice(["head","tail"]) == "head"):
+#         numberOfHeads += 1
+# print("in 100 tosses,heads occurred {0} times".format(numberOfHeads))
+
+
+
+# import random
+# import pickle
+# MUMBER_OF_TRIALS = 10000
+# def main():
+#     totalNumberOfMatches = 0
+#     for i in range (MUMBER_OF_TRIALS):
+#         totalNumberOfMatches += matchTwoDecks()
+#     averageNumberOfMatches = totalNumberOfMatches/MUMBER_OF_TRIALS
+#     print("the average number of card that")
+#     print("matched was{0:.3f}".format(averageNumberOfMatches))
+# def matchTwoDecks():
+#     infile = open
+# import random
+# whiteBalls = [num for num in range(1,60)]
+# whiteBallSelection = random.sample(whiteBalls,5)
+# print(whiteBallSelection)
+# for i in range(5):
+#     whiteBallSelection[i] = str(whiteBallSelection[i])
+# print("white balls: "," ".join(whiteBallSelection))
+# powerball = random.randint(1,35)
+# print("powerball: ",powerball)
+# import random
+# coin=["t","h"]
+# result = ""
+# for i in range(32):
+#     result += random.choice(coin)
+# print(result)
+# if ("ttttt" in result) or ("hhhhh" in result):
+#     print("there was a run of five consecutive")
+#     print("same outcome")
+
+# import time
+# import turtle
+# def drawRectangle(t,x,y,w,h,colorP="blank"):
+#     t.pencolor(colorP)  #设置颜色
+#     t.up()   #将笔抬起
+#     t.goto(x,y)
+#     t.down()
+#     t.goto(x+w,y)
+#     t.goto(x+w,y+h)
+#     t.goto(x,y+h)
+#     t.goto(x,y)
+#     drawRectangle2(t,x,y,w,h,colorP="black"):
+#     t.pencolor(colorP)
+#     t.up()
+#     t.goto(x,y)
+#     t.down()
+#     for i in range(2):
+#         t.forward(w)
+#         t.left(90)
+#         t.forward(h)
+#         t.left(90)
+# t = turtle.Turtle()
+# t.hideturtle()
+# time.sleep(10)
+
+
+# import turtle
+# import time
+# def main():
+#     t = turtle.Turtle()
+#     t.hideturtle()
+#     drawFilledRectangle(t,0,0,100,150,"green","pink")
+# def drawFilledRectangle(t,x,y,w,h,colorP="a",colorF="b"):
+#     t.pencolor(colorP)
+#     t.fillcolor(colorF)
+#     t.up()
+#     t.goto(x,y)
+#     t.down()
+#     t.begin_fill()
+#     t.goto(x+w,y)
+#     t.goto(x+w,y+h)
+#     t.goto(x,y+h)
+#     t.goto(x,y)
+#     t.end_fill()
+# main()
+# time.sleep(50)
+
+
+# import turtle
+# import time
+# def main():
+#     t = turtle.Turtle()
+#     t.hideturtle()
+#     drawFilledRectangle(t,0,0,150,25,"light blue","light blue")
+#     drawFilledRectangle(t,0,25,150,50,"blue","blue")
+#     drawFilledRectangle(t,0,75,150,25,"light blue","light blue")
+#     drawDot(t,75,50,40,"white")
+# def drawFilledRectangle(t,x,y,w,h,colorP="black",colorF="white"):
+#     t.pencolor(colorP)
+#     t.fillcolor(colorF)
+#     t.up()
+#     t.goto(x,y)
+#     t.down()
+#     t.begin_fill()
+#     t.goto(x+w,y)
+#     t.goto(x+w,y+h)
+#     t.goto(x,y+h)
+#     t.goto(x,y)
+#     t.end_fill()
+# def drawDot(t,x,y,diameter,colorP):
+#     t.up()
+#     t.goto(x,y)
+#     t.pencolor(colorP)
+#     t.dot(diameter)
+# main()
+# time.sleep(10)
+#
+#
+# import time
+# import turtle
+# def main():
+#     t = turtle.Turtle()
+#     t.hideturtle()
+#     lengthOfSide = 200
+#     drawFivePointStar(t,0,0,lengthOfSide)
+# def drawFivePointStar(t,x,y,lengthOfSide):
+#     t.up()
+#     t.goto(x,y)
+#     t.left(36)
+#     t.down()
+#     for i in range(5):
+#         t.forward(lengthOfSide)
+#         t.left(144)   #144=180-36
+# main()
+# time.sleep(10)
+#
+
+
+# import turtle
+# import time
+# t = turtle.Turtle()
+# t.hideturtle()
+# t.up()
+# t.goto(0,60)
+# t.dot()
+# t.write("python")
+# t.goto(0,30)
+# t.dot()
+# t.write("python",align="right")
+# t.goto(0,0)
+# t.dot()
+# t.write("python",align="center")
+# time.sleep(20)
+# import time
+# import turtle
+# t = turtle.Turtle()
+# # t.write("python",font=("Courier New",12,"bold"))
+# # t.write("python",font=("Courier New",12,"italic"))
+# # t.write("python",font=("Courier New",12,"underline"))
+# # t.write("python",font=("Courier New",12,"normal"))
+# time.sleep(3)
+
+
+
+# import turtle
+# import time
+# heights = [856,420,360,260,205]
+# def main():
+#     t = turtle.Turtle()
+#     t.hideturtle()
+#     for i in range(5):
+#         drawFilledRectangle(t,-200+(76*i),0,76,heights[i]/4,"blank","light blue")
+#     displayText()
+# def drawFilledRectangle(t,x,y,w,h,colorP="black",colorF="white"):
+#     t.pencolor(colorP)
+#     t.fillcolor(colorF)
+#     t.up()
+#     t.goto(x,y)
+#     t.down()
+#     t.begin_fill()
+#     t.goto(x+w,y)
+#     t.goto(x+w,y+h)
+#     t.goto(x,y+h)
+#     t.goto(x,y)
+#     t.end_fill()
+# def displayText(t):
+#     languages =["mandarin","spanish","english","hindi","bengali"]
+#     t.pencolor("blue")
+#     t.up()
+#     for i in range(5):
+#         t.goto(-162+(76*i),heights[i]/4)
+#         t.write(str(heights[i],align="center",font=("arial",10,"normal"))
+#         t.goto(-162+(76*i),10)
+#
+#
+#         t.write(languages[i],align="center",font=("arial",10,"normal"))
+#     t.goto(-200,-25)
+#     t.write("principal languages of the world",font=("arial",10,"normal"))
+#     t.goto(-200,-45)
+#     t.write('(in millions of "first language" dpeakers)',font=("arial",10,"normal"))
+# main()
+
+# import turtle
+# import time
+# t = turtle.Turtle()
+# t.hideturtle()
+# t.color("blue","pink")
+# t.begin_fill()
+# for i in range(36):
+#     t.forward(200)
+#     t.left(170)
+# t.speed(0)
+# t.end_fill()
+#
+# time.sleep(4)
+#
+# def power(r,n):
+#     value = 1
+#     for i in range(1,n+1):
+#         value = r*value
+#     return value
+# print(power(2,3))
+#
+#
+
+# counter = 0
+# def main():
+#     one()
+# def one():
+#     global counter
+#     counter += 1
+#     if counter <5:
+#         print("1",end="")
+#         two()
+# def two():
+#     print("2",end="")
+#     one()
+# # main()
+#
+# s = "hello world"
+# l = [1,2,3]
+# print(type(s))
+# print(type(l))
+#
+# import rectangle
+# r = rectangle.Rectangle(4,5)
+# print(r)
+# print()
+# r = rectangle.Rectangle()
+# print(r)
+# print()
+# r = rectangle.Rectangle(4)
+# print(r)
+
+
+# import random
+# def main():
+#     c = Card()
+#     c.selectAtRandom()
+#     print(c)
+# class Card:
+#     def __init__(self,rank="",suit=""):
+#         self._rank = rank
+#         self._suit = suit
+#     def selectAtRandom(self):
+#         ranks = ['2','3','4','5','6','7','8','9','10',"jack","queen","king","ace"]
+#         self._rank = random.choice(ranks)
+#         self._suit = random.choice(["spades","hearts","clubs","diamonds"])
+#     def __str__(self):
+#         return (self._rank + "of "+self._suit)
+# main()
+
+
+
+
+# def main():
+#     name = input("enter students name: ")
+#     midterm = float(input("enter students grade on midterm exam: "))
+#     final = float(input("enter students grade on final exam: "))
+#     st = LGstudents(name,midterm,final)
+#     print("\nNAME GRADE")
+#     print(st)
+# class LGstudents:
+#     def __init__(self,name="",midterm=0,final=0):
+#         self._name = name
+#         self._midterm = midterm
+#         self._final = final
+#     def setName(self,name):
+#         self._name = name
+#     def setMidterm(self,midterm):
+#         self._midterm = midterm
+#     def setFinal(self,final):
+#         self._final = final
+#     def calcSemGrade(self):
+#         average = (self._midterm + self._final)
+#         average = round(average)
+#         if average >=90:
+#             return "A"
+#         elif average >=80:
+#             return "B"
+#         elif average >= 70:
+#             return "C"
+#         elif average >= 60:
+#             return "D"
+#         else:
+#             return "F"
+#     def __str__(self):
+#         return self._name + "\t" + self.calcSemGrade()
+# main()
+
+
+
+'''继承'''
+
+
+
+
+# def displayResults(listOfStudents):
+#     print("\nNAME\tGRADE")
+#     numberOfLGstudents = 0
+#     listOfStudents.sort(key=lambda x:x.getName())
+#     for pupil in listOfStudents:
+#         print(pupil)
+#         if isinstance(pupil,student.LGstudent):
+#             numberOfLGstudents += 1
+#     print("number of letter-grade students:",numberOfLGstudents)
+#     print("number of pass-fail students:",len(listOfStudents) - numberOfLGstudents)
